@@ -1,5 +1,6 @@
 const cp = require('child_process')
 const util = require('util')
+const open = require('open')
 const spawn = util.promisify(cp.spawn)
 const exec = util.promisify(cp.exec)
 
@@ -33,6 +34,8 @@ async function main() {
       `displayplacer "id:D7D5FA3E-EDB3-4603-3F1F-A309049FCFA5 res:3840x1600 hz:60 color_depth:8 scaling:off origin:(0,0) degree:0" "id:${DISPLAY_ID} res:${RECORD_RES} color_depth:8 scaling:off origin:(3840,520) degree:0"`,
       `open /Applications/ScreenFlow.app`
     ]
+    await open('https://egghead.io/production')
+    await open('https://github.com/twclark0/')
     message = `Getting ready to start recording!`
   }
 
